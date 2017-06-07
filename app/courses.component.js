@@ -23,7 +23,7 @@ System.register(['angular2/core', './course.service'], function(exports_1, conte
         execute: function() {
             CoursesComponent = (function () {
                 function CoursesComponent(courseService) {
-                    this.title = "The title of courses page";
+                    this.title = "Writing courses";
                     this.courses = courseService.getCourses();
                 }
                 CoursesComponent = __decorate([
