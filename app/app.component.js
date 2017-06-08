@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component', './messages.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './authors.component', './messages.component', './icon.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, messages_component_1;
+    var core_1, courses_component_1, authors_component_1, messages_component_1, icon_component_1;
     var AppComponent;
     return {
         setters:[
@@ -25,16 +25,26 @@ System.register(['angular2/core', './courses.component', './authors.component', 
             },
             function (messages_component_1_1) {
                 messages_component_1 = messages_component_1_1;
+            },
+            function (icon_component_1_1) {
+                icon_component_1 = icon_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.isActive = true;
+                    this.isActive2 = false;
                 }
+                AppComponent.prototype.onClick = function ($event) {
+                    console.log("Clicked", $event);
+                };
+                AppComponent.prototype.onStarClick = function () {
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>First Angular 2 App</h1>\n    <courses></courses>\n    <authors></authors>\n    <messages></messages>\n    ",
-                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorComponent, messages_component_1.MessagesComponent]
+                        template: "\n    <div id=\"MainDiv\" style=\"margin-left:40px\">\n    <courses></courses>\n    <br>\n    <br>\n    <favorite></favorite>\n    <authors></authors>\n    <messages></messages>\n    </div>\n    ",
+                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorComponent, messages_component_1.MessagesComponent, icon_component_1.IconComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

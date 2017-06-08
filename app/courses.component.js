@@ -32,7 +32,7 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
                 CoursesComponent = __decorate([
                     core_1.Component({
                         selector: 'courses',
-                        template: "\n        <h2>Courses</h2>\n        {{title}}\n        <input type=\"text\" style=\"width: 120px\" autoGrow />\n        <ul>\n            <li *ngFor=\"#course of courses\">\n            {{ course }}\n            </li>\n        </ul>\n        ",
+                        template: "\n        <h2>Courses</h2>\n        {{title}}\n        <ul>\n            <li *ngFor=\"#course of courses\">\n            {{ course }}\n            </li>\n        </ul>\n        <input type=\"text\" style=\"width: 120px\" autoGrow />\n        ",
                         providers: [course_service_1.CourseService],
                         directives: [auto_grow_directive_1.AutoGrowDirective]
                     }), 

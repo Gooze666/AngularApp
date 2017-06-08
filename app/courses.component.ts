@@ -7,12 +7,12 @@ import {AutoGrowDirective} from './auto-grow.directive'
     template: `
         <h2>Courses</h2>
         {{title}}
-        <input type="text" style="width: 120px" autoGrow />
         <ul>
             <li *ngFor="#course of courses">
             {{ course }}
             </li>
         </ul>
+        <input type="text" style="width: 120px" autoGrow />
         `,
      providers: [CourseService],
      directives: [AutoGrowDirective]
